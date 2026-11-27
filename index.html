@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11152c">
+  <title>ANEES AI — Think Beyond Limits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span>✦</span></div>
+        <div><div class="brand-name">ANEES <b>AI</b></div><div class="brand-tag">THINK BEYOND LIMITS.</div></div>
+      </div>
+      <button class="new-chat" id="newChat"><span>＋</span> New chat</button>
+      <div class="side-label">YOUR WORKSPACE</div>
+      <button class="nav-item active" id="homeNav"><span>⌂</span> Chat</button>
+      <div class="history-head"><span>RECENT CHATS</span><button id="clearAll" title="Clear all conversations">···</button></div>
+      <div class="history-list" id="historyList"></div>
+      <div class="sidebar-bottom">
+        <button class="nav-item" id="settingsBtn"><span>⚙</span> Settings</button>
+        <div class="profile"><div class="avatar">MA</div><div><b>Muhammad Anees</b><small>Personal workspace</small></div><span class="online-dot"></span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="top-context"><span class="status-dot"></span><span>AI ASSISTANT</span><i>•</i><span id="chatLabel">New conversation</span></div>
+        <div class="top-actions">
+          <button class="icon-btn" id="themeToggle" title="Toggle light/dark mode">☼</button>
+          <button class="icon-btn" id="clearChat" title="Clear current chat">⌫</button>
+        </div>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="hero-orb"><div class="orb-core">✦</div><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span></div>
+          <div class="eyebrow"><span></span> YOUR IDEAS, AMPLIFIED</div>
+          <h1>Meet your next<br><em>big idea.</em></h1>
+          <p class="welcome-copy">Hello! I'm ANEES AI. How can I help you today?</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain a difficult topic in simple steps."><span class="suggestion-icon blue">✧</span><span><b>Learn something</b><small>Make complex topics simple</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Help me brainstorm creative ideas for a project."><span class="suggestion-icon pink">✳</span><span><b>Brainstorm ideas</b><small>Explore fresh possibilities</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Help me write a polished and engaging piece of content."><span class="suggestion-icon violet">⌁</span><span><b>Write with me</b><small>Turn thoughts into words</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Give me a step-by-step plan to solve a problem."><span class="suggestion-icon mint">⌘</span><span><b>Solve a problem</b><small>One step at a time</small></span><span class="arrow">↗</span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <section class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="messageInput" rows="1" placeholder="Message ANEES AI..." aria-label="Message ANEES AI"></textarea>
+          <div class="composer-bottom"><span class="input-hint"><span>↵</span> Enter to send · Shift + Enter for new line</span><button class="send-btn" id="sendBtn" type="submit" aria-label="Send message">↑</button></div>
+        </form>
+        <div class="disclaimer">ANEES AI can make mistakes. Check important information.</div>
+      </section>
+      <footer>Designed by <b>Muhammad Anees</b> <span>✦</span></footer>
+    </main>
+  </div>
+
+  <dialog id="settingsDialog">
+    <div class="dialog-head"><div><span class="eyebrow">PERSONALISE</span><h2>Settings</h2></div><button class="icon-btn" id="closeSettings">✕</button></div>
+    <label class="setting-row"><span><b>Appearance</b><small>Choose your preferred theme</small></span><select id="themeSelect"><option value="dark">Dark</option><option value="light">Light</option></select></label>
+    <div class="setting-row"><span><b>Chat history</b><small>Conversations are stored in this browser</small></span><span class="setting-pill">On this device</span></div>
+    <p class="settings-note">Your API key belongs on the server in the <code>.env</code> file. Never paste it into this page.</p>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
